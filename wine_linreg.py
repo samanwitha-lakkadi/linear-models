@@ -118,8 +118,6 @@ def show_weights(model, names):
 #     # manual positioning the label text - replaced with autolabel     
 #     for i, v in enumerate(w):
 #         ax.text(i - 0.25, v*1.05, "{:.2f}".format(v), color='red')
-
-show_weights(lr_model, df.columns.values)
 ####################
 
 
