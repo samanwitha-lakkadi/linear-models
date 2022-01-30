@@ -30,9 +30,11 @@ Abstract: Two datasets are included, related to red and white vinho verde wine s
 @st.cache
 def load_data(nrows):
     data = pd.read_csv(DATA_URL, sep=';', nrows=nrows)
-    
+    X = data.drop(['quality'], axis=1)
+    T = data['quality']
+    N = data.shape[0]
     # TODO: split training and testing to 80/20
-    X_train, X_test, t_train, t_test = 
+    X_train, X_test, t_train, t_test = train_test_split(X,T,test_size = 0.2)
     return data, X_train, X_test, t_train, t_test
 
 data, X_train, X_test, t_train, t_test = load_data(100000)
