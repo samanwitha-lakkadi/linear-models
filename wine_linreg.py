@@ -131,7 +131,7 @@ lr_model.fit(X_train, t_train)
 lr_model.score(X_test, t_test)
 y = lr_model.predict(X_test)
 evaluate(y, t_test.to_numpy())
-column_names = df.columns.values
+column_names = data.columns.values
 show_weights(lr_model, column_names)
 
 
